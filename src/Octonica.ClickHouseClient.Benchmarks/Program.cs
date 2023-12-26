@@ -21,9 +21,9 @@ namespace Octonica.ClickHouseClient.Benchmarks
 {
     internal static class Program
     {
-        private static void Main()
+        private static void Main(string[] args)
         {
-            BenchmarkRunner.Run(typeof(Program).Assembly);
+            BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args);
         }
     }
 }
